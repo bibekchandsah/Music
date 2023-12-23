@@ -530,7 +530,7 @@ function clicked(element) {
 // Event listener when the window is loaded
 window.addEventListener("load", () => {
     // Load music information from local storage
-    renderMusicList();
+    // renderMusicList();
     // loadFromLocalStorage();
     initializeMusicPlayer();
     renderCard();
