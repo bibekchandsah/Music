@@ -310,12 +310,57 @@ function showLoadingIcon() {
 
 // play or pause button event
 // Function to toggle play/pause
-playPauseBtn.addEventListener("click", () => {
-    const isMusicPlay = wrapper.classList.contains("paused");
-    //if isPlayMusic is true then call pauseMusic else call playMusic
-    isMusicPlay ? pauseMusic() : playMusic();
-    playingSong();
+// playPauseBtn.addEventListener("click", () => {
+//     const isMusicPlay = wrapper.classList.contains("paused");
+//     //if isPlayMusic is true then call pauseMusic else call playMusic
+//     isMusicPlay ? pauseMusic() : playMusic();
+//     playingSong();
+// });
+
+// Event listener for play/pause button click
+playPauseBtn.addEventListener("click", function () {
+    togglePlayPauseWithSpaceBar();
 });
+
+// Event listener for spacebar keydown
+document.addEventListener("keydown", function (e) {
+    if (e.code === "Space" && e.target.tagName !== "INPUT") {
+        e.preventDefault(); // Prevent the default spacebar behavior (e.g., scrolling)
+        togglePlayPauseWithSpaceBar();
+    }
+});
+
+// Function to toggle play/pause button icon and play/pause the music
+function togglePlayPauseWithSpaceBar() {
+    const isMusicPlaying = !mainAudio.paused;
+
+    // Check if the music is currently loading
+    const isLoading = mainAudio.readyState < 4; // Using readyState to check if the audio is still loading
+
+    if (isLoading) {
+        // Show loading icon
+        playPauseBtn.querySelector("i").innerText = "rotate_right";
+        playPauseBtn.querySelector("i").title = "Loading";
+        playPauseBtn.querySelector("i").classList.add("rotate");
+        return;
+    }
+
+    wrapper.classList.toggle("paused");
+    const isPaused = wrapper.classList.contains("paused");
+
+    // Update play/pause button icon based on the current state
+    if (isPaused) {
+        playPauseBtn.querySelector("i").innerText = "play_arrow";
+        playPauseBtn.querySelector("i").title = "Play";
+    } else {
+        playPauseBtn.querySelector("i").innerText = "pause";
+        playPauseBtn.querySelector("i").title = "Pause";
+    }
+
+    // Play or pause the music based on the current state
+    isPaused ? mainAudio.pause() : mainAudio.play();
+    playingSong();
+}
 
 
 //prev music button event
