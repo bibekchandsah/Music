@@ -360,7 +360,7 @@ ul li.playing{
 
 /* volume bar effect */
 .range-slider__range {
-  -webkit-appearance: none;
+/*   -webkit-appearance: none; */
   width: calc(100% - (73px));
   height: 10px;
   border-radius: 5px;
