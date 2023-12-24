@@ -186,6 +186,42 @@ function loadMusic(indexNumb, playCallback) {
 }
 
 
+// Get volume-related elements
+const volumeIcon = wrapper.querySelector("#volumeIcon");
+const volumeBar = wrapper.querySelector(".volume-bar");
+const volumeRange = wrapper.querySelector("#volumeRange");
+const volumeControl = wrapper.querySelector(".volume-control");
+
+// Event listener for volume icon click
+volumeIcon.addEventListener("click", toggleVolumeBar);
+
+// Event listener for volume range input
+volumeRange.addEventListener("input", setVolume);
+
+// Event listener for clicking outside volume control
+document.addEventListener("click", function (e) {
+  // Check if the click is outside the volume control
+  if (!volumeControl.contains(e.target)) {
+    // Click on the volume icon programmatically
+    volumeIcon.click();
+  }
+});
+
+// Function to toggle visibility of volume bar
+function toggleVolumeBar() {
+  volumeBar.style.display = volumeBar.style.display === "none" ? "flex" : "none";
+}
+
+// Function to set the volume based on the range input
+function setVolume() {
+  const volumeValue = volumeRange.value;
+  mainAudio.volume = volumeValue;
+}
+
+
+
+
+
 // Function to save current music information and entire music list to local storage
 // function saveToLocalStorage(indexNumb, musicList) {
 //     const currentMusic = {
@@ -246,12 +282,28 @@ function handleSongClick(li) {
 }
 
 
+// function playMusic() {
+//     if (mainAudio.paused) {
+//         try {
+//             wrapper.classList.add("paused");
+//             playPauseBtn.querySelector("i").innerText = "pause";
+//             mainAudio.play();
+//         } catch (error) {
+//             // Handle the play interruption error
+//             console.error("Play request interrupted:", error);
+//         }
+//     }
+// }
+
+// Update your playMusic function to handle volume when music starts playing
 function playMusic() {
     if (mainAudio.paused) {
         try {
             wrapper.classList.add("paused");
             playPauseBtn.querySelector("i").innerText = "pause";
             mainAudio.play();
+            // Set the initial volume based on the volume range input
+            mainAudio.volume = volumeRange.value;
         } catch (error) {
             // Handle the play interruption error
             console.error("Play request interrupted:", error);
@@ -295,7 +347,7 @@ function nextMusic() {
 }
 
 
-// Event listener for keyboard shortcuts for next and previous
+// Event listener for keyboard shortcuts
 document.addEventListener("keydown", function (e) {
     const isShiftPressed = e.shiftKey;
     const focusedElement = document.activeElement;
@@ -310,7 +362,7 @@ document.addEventListener("keydown", function (e) {
                 // Trigger the click event on the previous icon
                 prevBtn.click();
                 break;
-                // Shift + Right Arrow: Trigger the click event on the previous icon
+            // Shift + Right Arrow: Trigger the click event on the previous icon
             case "ArrowRight":
                 // Prevent the default action for Shift + Right Arrow
                 e.preventDefault();
@@ -323,6 +375,7 @@ document.addEventListener("keydown", function (e) {
         }
     }
 });
+
 
 
 // Function to show loading icon
@@ -390,7 +443,12 @@ function togglePlayPauseWithSpaceBar() {
     // Play or pause the music based on the current state
     isPaused ? mainAudio.pause() : mainAudio.play();
     playingSong();
+
+
 }
+
+
+
 
 
 //prev music button event
@@ -614,3 +672,8 @@ window.addEventListener("load", () => {
         // playMusic(); // Play the audio once metadata is loaded
     });
 });
+
+
+
+
+
