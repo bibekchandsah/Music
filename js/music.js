@@ -200,22 +200,23 @@ volumeRange.addEventListener("input", setVolume);
 
 // Event listener for clicking outside volume control
 document.addEventListener("click", function (e) {
-  // Check if the click is outside the volume control
-  if (!volumeControl.contains(e.target)) {
-    // Click on the volume icon programmatically
-    volumeIcon.click();
-  }
+    // Check if the click is outside the volume control
+    if (!volumeControl.contains(e.target)) {
+        // Hide the volume bar
+        volumeBar.style.display = "none";
+    }
 });
 
 // Function to toggle visibility of volume bar
 function toggleVolumeBar() {
-  volumeBar.style.display = volumeBar.style.display === "none" ? "flex" : "none";
+    // Toggle the display property based on the current state
+    volumeBar.style.display = volumeBar.style.display === "none" ? "flex" : "none";
 }
 
 // Function to set the volume based on the range input
 function setVolume() {
-  const volumeValue = volumeRange.value;
-  mainAudio.volume = volumeValue;
+    const volumeValue = volumeRange.value;
+    mainAudio.volume = volumeValue;
 }
 
 
