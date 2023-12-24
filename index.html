@@ -214,7 +214,13 @@
   <div class="wrapperr loading">
     <div class="loads">
       <div class="top-barr">
-        <i class="material-icons">expand_more</i>
+        <div class="volume-control">
+                    <!-- <i class="material-icons" id="volumeIcon">expand_more</i> -->
+                    <i class="material-icons" id="volumeIcon">volume_up</i>
+                    <div class="volume-bar range-slider">
+                        <input class="range-slider__range" type="range" id="volumeRange" min="0" max="1" step="0.01" value="0.5">
+                    </div>
+                </div>
         <span>Now Playing</span>
         <i class="material-icons" onclick="window.open('https://bibek10550.github.io/Music/');" title="Open music new tab">more_horiz</i>
       </div>
