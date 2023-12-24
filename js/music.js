@@ -1,4 +1,3 @@
-
 const navbarr = document.querySelectorAll(".nav");
 const wrapppers = document.querySelectorAll(".wrappper");
 const musics = document.querySelectorAll(".wrapperr");
@@ -27,14 +26,19 @@ const renderCard = () => {
         musicDiv.style.visibility = "visible";
     });
 }
+
+
 // Execute renderCard on setTimeout
 // setTimeout(() => {
 //   renderCard();
 // }, 4000);
+
+
 //Execute renderCard after the page loaded
 window.addEventListener("load", () => {
     renderCard();
 });
+
 
 // music function 
 const wrapper = document.querySelector(".wrapperr"),
@@ -50,10 +54,11 @@ const wrapper = document.querySelector(".wrapperr"),
     musicList = wrapper.querySelector(".music-list"),
     moreMusicBtn = wrapper.querySelector("#more-music"),
     closemoreMusic = musicList.querySelector("#closee");
-
 let musicIndex = Math.floor((Math.random() * allMusic.length) + 1);
 isMusicPaused = true;
 
+
+// load the data when window loads
 window.addEventListener("load", () => {
     renderMusicList();
     renderCard();
@@ -63,22 +68,20 @@ window.addEventListener("load", () => {
 });
 
 
+// initialize th music player
 function initializeMusicPlayer() {
     // Event listeners for play, pause, next, and previous buttons
     playPauseBtn.addEventListener("click", togglePlayPause);
     prevBtn.addEventListener("click", prevMusic);
     nextBtn.addEventListener("click", nextMusic);
-
     // Event listener for loadeddata
     mainAudio.addEventListener("loadeddata", () => {
         handleLoadedData();
     });
-
     // Event listener for ended
     mainAudio.addEventListener("ended", () => {
         handleMusicEnded();
     });
-
     // Event listener for clicking on a song in the list
     const allLiTag = musicList.querySelectorAll("li");
     allLiTag.forEach((li) => {
@@ -86,15 +89,8 @@ function initializeMusicPlayer() {
     });
 }
 
-// function togglePlayPause() {
-//     if (mainAudio.paused) {
-//         playMusic();
-//     } else {
-//         pauseMusic();
-//     }
-//     playingSong();
-// }
 
+// Show loading icon when click to play or pause button
 function playMusic() {
     if (mainAudio.paused) {
         showLoadingIcon();
@@ -102,15 +98,21 @@ function playMusic() {
     }
 }
 
+
+// remove loading icon when click to pause button
 function pauseMusic() {
     mainAudio.pause();
     removeLoadingIcon();
 }
 
+
+// Function to remove loading icon when audio is being played
 function handleLoadedData() {
     removeLoadingIcon();
 }
 
+
+// When the music ends, go to the start of the current song or move to the next one
 function handleMusicEnded() {
     let getText = repeatBtn.innerText;
     switch (getText) {
@@ -124,22 +126,33 @@ function handleMusicEnded() {
             break;
         case "shuffle":
             musicIndex = Math.floor((Math.random() * allMusic.length) + 1);
+            // loadMusic(musicIndex);
+            //added
+            showLoadingIcon();
+            // loadMusic(musicIndex, playMusic);
             loadMusic(musicIndex);
-            playMusic();
+            removeLoadingIcon();
+
+            playMusic(); // added
             playingSong();
             break;
     }
 }
 
+
+// Show loading icon when click to play or pause button
 function showLoadingIcon() {
     playPauseBtn.querySelector("i").innerText = "rotate_right";
     playPauseBtn.querySelector("i").title = "Loading";
     playPauseBtn.querySelector("i").classList.add("rotate");
 }
 
+
+// remove loading icon when click to play or pause button
 function removeLoadingIcon() {
-    playPauseBtn.querySelector("i").innerText = "play_arrow";
-    playPauseBtn.querySelector("i").title = "Play";
+    // playPauseBtn.querySelector("i").innerText = "play_arrow";
+    playPauseBtn.querySelector("i").innerText = "pause";
+    playPauseBtn.querySelector("i").title = "pause";
     playPauseBtn.querySelector("i").classList.remove("rotate");
 }
 
@@ -152,38 +165,33 @@ function loadMusic(indexNumb, playCallback) {
         playPauseBtn.querySelector("i").innerText = "rotate_right";
         playPauseBtn.querySelector("i").title = "Loading";
         playPauseBtn.querySelector("i").classList.add("rotate");
-    }
 
+    }
     // Show loading message in the console
     console.log(`Loading ${allMusic[indexNumb - 1].name}...`);
-
+    // set the music name, artist name, image and audio source
     musicName.innerText = allMusic[indexNumb - 1].name;
     musicArtist.innerText = allMusic[indexNumb - 1].artist;
     musicImg.src = allMusic[indexNumb - 1].img;
     mainAudio.src = allMusic[indexNumb - 1].src;
-
-    // Save current music information and entire music list to local storage
-    // saveToLocalStorage(indexNumb, allMusic);
-
     // Event listener for when metadata is loaded
     mainAudio.addEventListener("loadedmetadata", function () {
         // Log "Loaded" message in the console
         console.log(`Loaded ${allMusic[indexNumb - 1].name}`);
-        // playMusic(); // Play the audio once metadata is loaded
+        playMusic(); // Play the audio once metadata is loaded
     });
-
-
     mainAudio.addEventListener("loadeddata", () => {
         // Remove loading icon, show play icon, set title, and remove spinning class
-        playPauseBtn.querySelector("i").innerText = "play_arrow";
-        playPauseBtn.querySelector("i").title = "Play";
+        // playPauseBtn.querySelector("i").innerText = "play_arrow";
+        playPauseBtn.querySelector("i").innerText = "pause";
+        playPauseBtn.querySelector("i").title = "play";
         playPauseBtn.querySelector("i").classList.remove("rotate");
-
         if (playCallback) {
             playCallback();
         }
     });
 }
+// loadMusic(musicIndex, playMusic);
 
 
 // Get volume-related elements
@@ -191,13 +199,10 @@ const volumeIcon = wrapper.querySelector("#volumeIcon");
 const volumeBar = wrapper.querySelector(".volume-bar");
 const volumeRange = wrapper.querySelector("#volumeRange");
 const volumeControl = wrapper.querySelector(".volume-control");
-
 // Event listener for volume icon click
 volumeIcon.addEventListener("click", toggleVolumeBar);
-
 // Event listener for volume range input
 volumeRange.addEventListener("input", setVolume);
-
 // Event listener for clicking outside volume control
 document.addEventListener("click", function (e) {
     // Check if the click is outside the volume control
@@ -206,12 +211,12 @@ document.addEventListener("click", function (e) {
         volumeBar.style.display = "none";
     }
 });
-
 // Function to toggle visibility of volume bar
 function toggleVolumeBar() {
     // Toggle the display property based on the current state
     volumeBar.style.display = volumeBar.style.display === "none" ? "flex" : "none";
 }
+
 
 // Function to set the volume based on the range input
 function setVolume() {
@@ -220,88 +225,24 @@ function setVolume() {
 }
 
 
-
-
-
-// Function to save current music information and entire music list to local storage
-// function saveToLocalStorage(indexNumb, musicList) {
-//     const currentMusic = {
-//         index: indexNumb,
-//         name: allMusic[indexNumb - 1].name,
-//         artist: allMusic[indexNumb - 1].artist,
-//         img: allMusic[indexNumb - 1].img,
-//         src: allMusic[indexNumb - 1].src,
-//     };
-
-//     const localStorageData = {
-//         currentMusic: currentMusic,
-//         allMusic: musicList,
-//     };
-
-//     localStorage.setItem("musicData", JSON.stringify(localStorageData));
-// }
-
-
-// Function to load music information from local storage
-// function loadFromLocalStorage() {
-//     const storedMusic = localStorage.getItem("currentMusic");
-
-//     if (storedMusic) {
-//         const currentMusic = JSON.parse(storedMusic);
-//         musicName.innerText = currentMusic.name;
-//         musicArtist.innerText = currentMusic.artist;
-//         musicImg.src = currentMusic.img;
-//         mainAudio.src = currentMusic.src;
-//         musicIndex = currentMusic.index;
-//         playingSong();
-//     }
-// }
-
-
-// Function to load music information from local storage
-// function loadFromLocalStorage() {
-//     const storedMusicData = localStorage.getItem("musicData");
-
-//     if (storedMusicData) {
-//         const localStorageData = JSON.parse(storedMusicData);
-//         musicName.innerText = localStorageData.currentMusic.name;
-//         musicArtist.innerText = localStorageData.currentMusic.artist;
-//         musicImg.src = localStorageData.currentMusic.img;
-//         mainAudio.src = localStorageData.currentMusic.src;
-//         musicIndex = localStorageData.currentMusic.index;
-//         playingSong();
-//     }
-// }
-
-
+//  handle the clicked song list item, updating the UI, and playing the selected song.
 function handleSongClick(li) {
     const liIndex = li.getAttribute("li-index");
     musicIndex = liIndex;
     loadMusic(musicIndex);
     playMusic();
+    removeLoadingIcon(); // added
     playingSong();
 }
 
-
-// function playMusic() {
-//     if (mainAudio.paused) {
-//         try {
-//             wrapper.classList.add("paused");
-//             playPauseBtn.querySelector("i").innerText = "pause";
-//             mainAudio.play();
-//         } catch (error) {
-//             // Handle the play interruption error
-//             console.error("Play request interrupted:", error);
-//         }
-//     }
-// }
 
 // Update your playMusic function to handle volume when music starts playing
 function playMusic() {
     if (mainAudio.paused) {
         try {
-            wrapper.classList.add("paused");
-            playPauseBtn.querySelector("i").innerText = "pause";
+            // wrapper.classList.add("paused");
+            wrapper.classList.remove("paused");
+            playPauseBtn.querySelector("i").innerText = "rotate_right";
             mainAudio.play();
             // Set the initial volume based on the volume range input
             mainAudio.volume = volumeRange.value;
@@ -316,35 +257,9 @@ function playMusic() {
 //pause music function
 function pauseMusic() {
     wrapper.classList.remove("paused");
+    // wrapper.classList.add("paused");
     playPauseBtn.querySelector("i").innerText = "play_arrow";
     mainAudio.pause();
-}
-
-
-//prev music function
-function prevMusic() {
-    musicIndex--; //decrement of musicIndex by 1
-    //if musicIndex is less than 1 then musicIndex will be the array length so the last music play
-    musicIndex < 1 ? musicIndex = allMusic.length : musicIndex = musicIndex;
-    // Show loading icon
-    showLoadingIcon();
-    // loadMusic(musicIndex);
-    loadMusic(musicIndex, playMusic);
-    // playMusic();
-    // playingSong();
-}
-
-
-function nextMusic() {
-    musicIndex++; //increment of musicIndex by 1
-    //if musicIndex is greater than array length then musicIndex will be 1 so the first music play
-    musicIndex > allMusic.length ? musicIndex = 1 : musicIndex = musicIndex;
-    // Show loading icon
-    showLoadingIcon();
-    // loadMusic(musicIndex);
-    loadMusic(musicIndex, playMusic);
-    // playMusic();
-    // playingSong();
 }
 
 
@@ -352,7 +267,6 @@ function nextMusic() {
 document.addEventListener("keydown", function (e) {
     const isShiftPressed = e.shiftKey;
     const focusedElement = document.activeElement;
-
     if (!focusedElement.tagName || focusedElement.tagName.toLowerCase() !== "input") {
         // Check if no input field is focused
         switch (e.code) {
@@ -378,49 +292,36 @@ document.addEventListener("keydown", function (e) {
 });
 
 
-
 // Function to show loading icon
-function showLoadingIcon() {
-    const icon = playPauseBtn.querySelector("i");
+// function showLoadingIcon() {
+//     const icon = playPauseBtn.querySelector("i");
+//     // Set inner text and title to "Loading" if they are not "play_arrow" or "pause"
+//     // if (icon.innerText !== "play_arrow" && icon.innerText !== "pause") {
+//     if (icon.innerText == "play_arrow" || icon.innerText == "pause") {
+//         icon.innerText = "rotate_right";
+//         icon.title = "Loading";
+//         icon.classList.add("rotate");
+//     }
+// }
 
-    // Set inner text and title to "Loading" if they are not "play_arrow" or "pause"
-    if (icon.innerText !== "play_arrow" && icon.innerText !== "pause") {
-        icon.innerText = "rotate_right";
-        icon.title = "Loading";
-        icon.classList.add("rotate");
-    }
-}
 
-
-// play or pause button event
-// Function to toggle play/pause
-// playPauseBtn.addEventListener("click", () => {
-//     const isMusicPlay = wrapper.classList.contains("paused");
-//     //if isPlayMusic is true then call pauseMusic else call playMusic
-//     isMusicPlay ? pauseMusic() : playMusic();
-//     playingSong();
-// });
-
-// Event listener for play/pause button click
+// Event listener for play/pause button click for space bar
 playPauseBtn.addEventListener("click", function () {
     togglePlayPauseWithSpaceBar();
 });
-
-// Event listener for spacebar keydown
+// Toggle between playing and pausing with space bar
+// Event listener for space bar keydown
 document.addEventListener("keydown", function (e) {
     if (e.code === "Space" && e.target.tagName !== "INPUT") {
-        e.preventDefault(); // Prevent the default spacebar behavior (e.g., scrolling)
+        e.preventDefault(); // Prevent the default space bar behavior (e.g., scrolling)
         togglePlayPauseWithSpaceBar();
     }
 });
-
 // Function to toggle play/pause button icon and play/pause the music
 function togglePlayPauseWithSpaceBar() {
     const isMusicPlaying = !mainAudio.paused;
-
     // Check if the music is currently loading
     const isLoading = mainAudio.readyState < 4; // Using readyState to check if the audio is still loading
-
     if (isLoading) {
         // Show loading icon
         playPauseBtn.querySelector("i").innerText = "rotate_right";
@@ -428,10 +329,8 @@ function togglePlayPauseWithSpaceBar() {
         playPauseBtn.querySelector("i").classList.add("rotate");
         return;
     }
-
     wrapper.classList.toggle("paused");
     const isPaused = wrapper.classList.contains("paused");
-
     // Update play/pause button icon based on the current state
     if (isPaused) {
         playPauseBtn.querySelector("i").innerText = "play_arrow";
@@ -440,27 +339,58 @@ function togglePlayPauseWithSpaceBar() {
         playPauseBtn.querySelector("i").innerText = "pause";
         playPauseBtn.querySelector("i").title = "Pause";
     }
-
     // Play or pause the music based on the current state
     isPaused ? mainAudio.pause() : mainAudio.play();
     playingSong();
-
-
 }
-
-
-
 
 
 //prev music button event
 prevBtn.addEventListener("click", () => {
+    playPauseBtn.querySelector("i").innerText = "rotate_right";
+    showLoadingIcon();
     prevMusic();
 });
 
+
 //next music button event
 nextBtn.addEventListener("click", () => {
+    playPauseBtn.querySelector("i").innerText = "rotate_right";
+    showLoadingIcon();
     nextMusic();
 });
+
+
+//prev music function
+function prevMusic() {
+    playPauseBtn.querySelector("i").innerText = "rotate_right";
+    showLoadingIcon();
+    musicIndex--; //decrement of musicIndex by 1
+    //if musicIndex is less than 1 then musicIndex will be the array length so the last music play
+    musicIndex < 1 ? musicIndex = allMusic.length : musicIndex = musicIndex;
+    // Show loading icon
+    // loadMusic(musicIndex);
+    loadMusic(musicIndex, playMusic);
+    // removeLoadingIcon(); // add
+    playMusic();
+    playingSong();
+}
+
+
+function nextMusic() {
+    playPauseBtn.querySelector("i").innerText = "rotate_right";
+    showLoadingIcon();
+    musicIndex++; //increment of musicIndex by 1
+    //if musicIndex is greater than array length then musicIndex will be 1 so the first music play
+    musicIndex > allMusic.length ? musicIndex = 1 : musicIndex = musicIndex;
+    // Show loading icon
+    // loadMusic(musicIndex);
+    loadMusic(musicIndex, playMusic);
+    // removeLoadingIcon(); // add
+    playMusic();
+    playingSong();
+}
+
 
 // update progress bar width according to music current time
 mainAudio.addEventListener("timeupdate", (e) => {
@@ -468,9 +398,8 @@ mainAudio.addEventListener("timeupdate", (e) => {
     const duration = e.target.duration; //getting playing song total duration
     let progressWidth = (currentTime / duration) * 100;
     progressBar.style.width = `${progressWidth}%`;
-
     let musicCurrentTime = wrapper.querySelector(".current-time"),
-        musicDuartion = wrapper.querySelector(".max-duration");
+        musicDuration = wrapper.querySelector(".max-duration");
     mainAudio.addEventListener("loadeddata", () => {
         // update song total duration
         let mainAdDuration = mainAudio.duration;
@@ -479,7 +408,7 @@ mainAudio.addEventListener("timeupdate", (e) => {
         if (totalSec < 10) { //if sec is less than 10 then add 0 before it
             totalSec = `0${totalSec}`;
         }
-        musicDuartion.innerText = `${totalMin}:${totalSec}`;
+        musicDuration.innerText = `${totalMin}:${totalSec}`;
     });
     // update playing song current time
     let currentMin = Math.floor(currentTime / 60);
@@ -491,24 +420,20 @@ mainAudio.addEventListener("timeupdate", (e) => {
 });
 
 
-
+// progress area
 progressArea.addEventListener("click", (e) => {
     let progressWidth = progressArea.clientWidth;
     let clickedOffsetX = e.offsetX;
     let songDuration = mainAudio.duration;
-
     // Check if songDuration is valid before calculating
     if (progressWidth > 0 && isFinite(songDuration)) {
         // Calculate the new currentTime based on the clicked position
         mainAudio.currentTime = (clickedOffsetX / progressWidth) * songDuration;
-
         // Play music from the new currentTime
         playMusic();
         playingSong();
     }
 });
-
-
 
 
 //change loop, shuffle, repeat icon onclick
@@ -531,6 +456,7 @@ repeatBtn.addEventListener("click", () => {
     }
 });
 
+
 //code for what to do after song ended
 mainAudio.addEventListener("ended", () => {
     // we'll do according to the icon means if user has set icon to
@@ -551,7 +477,12 @@ mainAudio.addEventListener("ended", () => {
                 randIndex = Math.floor((Math.random() * allMusic.length) + 1);
             } while (musicIndex == randIndex); //this loop run until the next random number won't be the same of current musicIndex
             musicIndex = randIndex; //passing randomIndex to musicIndex
-            loadMusic(musicIndex);
+            // added
+            showLoadingIcon();
+            loadMusic(musicIndex, playMusic);
+            // removeLoadingIcon();
+
+            // loadMusic(musicIndex);
             playMusic();
             playingSong();
             break;
@@ -563,7 +494,6 @@ mainAudio.addEventListener("ended", () => {
 document.addEventListener("click", function (e) {
     const musicList = wrapper.querySelector(".music-list");
     const closemoreMusic = musicList.querySelector("#closee");
-
     // Toggle music list visibility when the music icon is clicked
     if (e.target === moreMusicBtn) {
         musicList.classList.toggle("show");
@@ -572,7 +502,6 @@ document.addEventListener("click", function (e) {
         musicList.classList.remove("show");
     }
 });
-
 // Event listener to close music list when "closee" is clicked
 closemoreMusic.addEventListener("click", function () {
     moreMusicBtn.click();
@@ -583,12 +512,10 @@ const ulTag = wrapper.querySelector("ul");
 // Function to render the music list
 function renderMusicList() {
     const ulTag = wrapper.querySelector("ul");
-
     // Loop through allMusic array to generate list items
     for (let i = 0; i < allMusic.length; i++) {
         // Generate a unique ID for each audio element
         const audioId = `audio-${i}`;
-
         // Generate liTag
         let liTag = `<li li-index="${i + 1}">
               <div class="row">
@@ -598,14 +525,11 @@ function renderMusicList() {
               <span class="audio-duration" data-duration="3:42"></span>
               <audio id="${audioId}" src="${allMusic[i].src}"></audio>
             </li>`;
-
         ulTag.insertAdjacentHTML("beforeend", liTag);
-
-        let liAudioDuartionTag = ulTag.querySelector(`[id="${audioId}"] + .audio-duration`);
+        let liAudioDurationTag = ulTag.querySelector(`[id="${audioId}"] + .audio-duration`);
         let liAudioTag = ulTag.querySelector(`#${audioId}`);
-
-        // Check if liAudioDuartionTag is found before setting innerText
-        if (liAudioDuartionTag) {
+        // Check if liAudioDurationTag is found before setting innerText
+        if (liAudioDurationTag) {
             liAudioTag.addEventListener("loadeddata", () => {
                 // Update the duration once the audio is loaded
                 let duration = liAudioTag.duration;
@@ -614,8 +538,8 @@ function renderMusicList() {
                 if (totalSec < 10) {
                     totalSec = `0${totalSec}`;
                 }
-                liAudioDuartionTag.innerText = `${totalMin}:${totalSec}`;
-                liAudioDuartionTag.setAttribute("t-duration", `${totalMin}:${totalSec}`); //adding t-duration attribute with total duration value
+                liAudioDurationTag.innerText = `${totalMin}:${totalSec}`;
+                liAudioDurationTag.setAttribute("t-duration", `${totalMin}:${totalSec}`); //adding t-duration attribute with total duration value
             });
         } else {
             // console.error(`Could not find audio duration tag for ${allMusic[i].name}`);
@@ -626,36 +550,41 @@ function renderMusicList() {
 }
 
 
-
 // Function to play a particular song from the list onclick of li tag
+// add loading 
 function playingSong() {
     const ulTag = wrapper.querySelector("ul");
     const allLiTag = ulTag.querySelectorAll("li");
-
     for (let j = 0; j < allLiTag.length; j++) {
         let audioTag = allLiTag[j].querySelector(".audio-duration");
-
         if (allLiTag[j].classList.contains("playing")) {
             allLiTag[j].classList.remove("playing");
             let adDuration = audioTag.getAttribute("data-duration");
             audioTag.innerText = adDuration;
         }
-
         if (allLiTag[j].getAttribute("li-index") == musicIndex) {
             allLiTag[j].classList.add("playing");
             audioTag.innerText = "Playing";
         }
-
         allLiTag[j].setAttribute("onclick", "clicked(this)");
     }
 }
 
 
 //particular li clicked function
+// add loading
 function clicked(element) {
     let getLiIndex = element.getAttribute("li-index");
     musicIndex = getLiIndex; //updating current song index with clicked li index
-    loadMusic(musicIndex);
+    // loadMusic(musicIndex);
+
+    // added
+    // Show loading icon
+    showLoadingIcon();;
+    loadMusic(musicIndex, playMusic);
+    // removeLoadingIcon();
+
+
     playMusic();
     playingSong(ulTag);
 }
@@ -663,9 +592,6 @@ function clicked(element) {
 
 // Event listener when the window is loaded
 window.addEventListener("load", () => {
-    // Load music information from local storage
-    // renderMusicList();
-    // loadFromLocalStorage();
     initializeMusicPlayer();
     renderCard();
     // Event listener for when metadata is loaded
@@ -673,8 +599,3 @@ window.addEventListener("load", () => {
         // playMusic(); // Play the audio once metadata is loaded
     });
 });
-
-
-
-
-
