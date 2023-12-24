@@ -295,6 +295,36 @@ function nextMusic() {
 }
 
 
+// Event listener for keyboard shortcuts for next and previous
+document.addEventListener("keydown", function (e) {
+    const isShiftPressed = e.shiftKey;
+    const focusedElement = document.activeElement;
+
+    if (!focusedElement.tagName || focusedElement.tagName.toLowerCase() !== "input") {
+        // Check if no input field is focused
+        switch (e.code) {
+            // Shift + Left Arrow: Trigger the click event on the previous icon
+            case "ArrowLeft":
+                // Prevent the default action for Shift + Left Arrow
+                e.preventDefault();
+                // Trigger the click event on the previous icon
+                prevBtn.click();
+                break;
+                // Shift + Right Arrow: Trigger the click event on the previous icon
+            case "ArrowRight":
+                // Prevent the default action for Shift + Right Arrow
+                e.preventDefault();
+                // Trigger the click event on the next icon
+                nextBtn.click();
+                break;
+            default:
+                // Handle other key combinations if needed
+                break;
+        }
+    }
+});
+
+
 // Function to show loading icon
 function showLoadingIcon() {
     const icon = playPauseBtn.querySelector("i");
