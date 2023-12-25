@@ -473,13 +473,22 @@ ul li.playing{
   cursor: pointer;
   position: relative;
   top: 5px;
-  color: #231a4d;
+  color: var(--lightblack);
+  box-shadow: 1px 2px 4px 0px rgba(0, 0, 0, 0.75);
+  -webkit-box-shadow: 1px 2px 4px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 1px 2px 4px 0px rgba(0, 0, 0, 0.75);
+  border-radius: 25px;
+  padding: 2px;
 }
 
-#searchIcon:hover{
+#searchIcon:hover {
   color: #575fff;
   transition: transform 250ms ease-in-out;
   transform: scale(1.4);
+}
+
+#searchIcon:active {
+  transform: scale(0.9);
 }
 
 #searchInput::placeholder {
@@ -492,7 +501,7 @@ ul li.playing{
 /* clear icon */
 .clear__icon {
   cursor: pointer;
-  right: 70px;
+  right: 72px;
   top: 59px;
   position: absolute;
   padding: 2px;
@@ -510,6 +519,6 @@ ul li.playing{
   color: #fff;
 }
 
-.clear__icon:active{
+.clear__icon:active {
   transform: scale(0.9);
 }
