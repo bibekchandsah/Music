@@ -675,7 +675,14 @@ function searchGoogle() {
     const searchInput = document.querySelector(".search__input");
     const query = searchInput.value.trim();
     if (query !== "") {
-        const searchUrl = "https://www.bing.com/search?q=" + encodeURIComponent(query);
+        // search on google
+        // const searchUrl = "https://www.bing.com/search?q=" + encodeURIComponent(query);
+        // https://www.jiosaavn.com/search/song/dil%20janeye
+        // search on jiosaavn website
+        const searchUrl = "https://www.jiosaavn.com/search/song/" + encodeURIComponent(query);
+        // search on paglasong website
+        // https://www.google.com/search?q=mere%20sajna&sitesearch=paglasongs.com
+        // const searchUrl = "https://www.google.com/search?q=" + encodeURIComponent(query) +"&sitesearch=paglasongs.com";
         window.open(searchUrl, "_blank");
         // Select the text inside the input after the search button is pressed
         searchInput.select();
