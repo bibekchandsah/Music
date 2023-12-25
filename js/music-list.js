@@ -100,6 +100,61 @@ let allMusic = [
       src: "https://pagalsong.com.in/uploads/systemuploads/mp3/Khandaani%20Shafakhana/Dil%20Jaaniye%20-%20Khandaani%20Shafakhana%20128%20Kbps.mp3"
       // src: "https://pagalsong.com.in/download/10200/Dil%20Jaaniye%20320%20KBPS%20mp3"
     },
+        {
+      name: "Jitni Dafa - Parmanu",
+      artist: "Yasser Desai",
+      img: "https://pagalsong.com.in/uploads//thumbnails/300x300/id3Picture_787724045.jpg",
+      src: "https://pagalsong.com.in/uploads/systemuploads/mp3/Parmanu/Jitni%20Dafa%20(Parmanu%20-%20The%20Story%20Of%20Pokhran)%20128%20Kbps.mp3",
+      // src: "https://pagalsong.com.in/download/1540/Jitni%20Dafa%20320%20KBPS%20mp3"
+    },
+    {
+      name: "Hum Mar Jayenge - Aashiqui 2",
+      artist: "Tulsi Kumar, Arijit Singh",
+      img: "https://pagalsong.com.in/uploads//thumbnails/300x300/id3Picture_872050244.jpg",
+      src: "https://pagalsong.com.in/uploads/systemuploads/mp3/Aashiqui%202/Hum%20Mar%20Jayenge.mp3"
+    },
+    {
+      name: "Humdard - Ek Villain",
+      artist: "Mithoon, Arijit Singh",
+      img: "https://pagalsong.com.in/uploads//thumbnails/300x300/id3Picture_1050342207.jpg",
+      src: "https://pagalsong.com.in/uploads/systemuploads/mp3/Ek%20Villain/Humdard.mp3"
+    },
+    {
+      name: "Tujhe Kitna Chahne Lage - Kabir Singh",
+      artist: "Mithoon, Arijit Singh",
+      img: "https://pagalsong.com.in/uploads//thumbnails/300x300/id3Picture_102009727.jpg",
+      src: "https://pagalsong.com.in/uploads/systemuploads/mp3/Kabir%20Singh/Tujhe%20Kitna%20Chahne%20Lage%20-%20Kabir%20Singh%20128%20Kbps.mp3"
+    },
+    {
+      name: "Ek Tarfa",
+      artist: "Darshan Raval",
+      img: "https://pagalsong.com.in/uploads//thumbnails/300x300/id3Picture_537500319.jpg",
+      src: "https://pagalsong.com.in/uploads/systemuploads/mp3/Ek%20Tarfa%20-%20Darshan%20Raval/Ek%20Tarfa%20-%20Darshan%20Raval%20128%20Kbps.mp3"
+    },
+    {
+      name: "Besharam Rang - Pathaan",
+      artist: "Vishal Shekhar, Shilpa Rao",
+      img: "https://pagalsong.com.in/uploads//thumbnails/300x300/id3Picture_1969274076.jpg",
+      src: "https://pagalsong.com.in/uploads/systemuploads/mp3/Pathaan/Besharam%20Rang%20-%20Pathaan%20128%20Kbps.mp3"
+    },
+    {
+      name: "Barbaadiyan - Shiddat",
+      artist: "Sachet Tandon, Nikhita Gandhi",
+      img: "https://pagalsong.com.in/uploads//thumbnails/300x300/id3Picture_915626579.jpg",
+      src: "https://pagalsong.com.in/uploads/systemuploads/mp3/Shiddat/Barbaadiyan%20-%20Shiddat%20128%20Kbps.mp3"
+    },
+    {
+      name: "Bandeya - Dil Juunglee",
+      artist: "Arijit Singh",
+      img: "https://pagalsong.com.in/uploads//thumbnails/300x300/id3Picture_643490699.jpg",
+      src: "https://pagalsong.com.in/uploads/systemuploads/mp3/Dil%20Juunglee/Bandeya%20(Dil%20Juunglee)%20128%20Kbps.mp3"
+    },
+    {
+      name: "Akhiyaan Milavanga - Commando 3",
+      artist: "Arijit Singh, Sruthy Sasidharan",
+      img: "https://pagalsong.com.in/uploads//thumbnails/300x300/id3Picture_25762861.jpg",
+      src: "https://pagalsong.com.in/uploads/systemuploads/mp3/Commando%203/Akhiyaan%20Milavanga%20-%20Commando%203%20128%20Kbps.mp3"
+    },
     // {
     //   name: "",
     //   artist: "",
