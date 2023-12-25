@@ -140,6 +140,9 @@ function handleMusicEnded() {
 }
 
 
+
+
+
 // Show loading icon when click to play or pause button
 function showLoadingIcon() {
     playPauseBtn.querySelector("i").innerText = "rotate_right";
@@ -522,9 +525,10 @@ function renderMusicList() {
                 <span>${allMusic[i].name}</span>
                 <p>${allMusic[i].artist}</p>
               </div>
-              <span class="audio-duration" data-duration="3:42"></span>
+              <span class="audio-duration" data-duration="Play"></span>
               <audio id="${audioId}" src="${allMusic[i].src}"></audio>
-            </li>`;
+              </li>`;
+            //   <span class="audio-duration" data-duration="3:42"></span>
         ulTag.insertAdjacentHTML("beforeend", liTag);
         let liAudioDurationTag = ulTag.querySelector(`[id="${audioId}"] + .audio-duration`);
         let liAudioTag = ulTag.querySelector(`#${audioId}`);
@@ -547,6 +551,48 @@ function renderMusicList() {
         }
     }
 
+    // Add event listener for search input
+    const searchInput = document.getElementById('searchInput');
+    searchInput.addEventListener('input', handleSearch);
+
+    // Initial render of the music list
+    filterAndRenderList('');
+
+}
+
+// Function to filter and render the music list based on search input
+function filterAndRenderList(searchText) {
+    const ulTag = wrapper.querySelector("ul");
+    ulTag.innerHTML = ''; // Clear the existing list
+
+    for (let i = 0; i < allMusic.length; i++) {
+        // Check if the music name or artist matches the search input
+        if (allMusic[i].name.toLowerCase().includes(searchText.toLowerCase()) ||
+            allMusic[i].artist.toLowerCase().includes(searchText.toLowerCase()) || 
+            allMusic[i].category.toLowerCase().includes(searchText.toLowerCase())) {
+
+            // Render the matching item
+            const audioId = `audio-${i}`;
+            let liTag = `<li li-index="${i + 1}">
+                  <div class="row">
+                    <span>${allMusic[i].name}</span>
+                    <p>${allMusic[i].artist}</p>
+                  </div>
+                  <span class="audio-duration" data-duration="Play"></span>
+                  <audio id="${audioId}" src="${allMusic[i].src}"></audio>
+                  </li>`;
+                  
+                  //   <span class="audio-duration" data-duration="3:42"></span>
+                  ulTag.insertAdjacentHTML("beforeend", liTag);
+        }
+    }
+}
+
+// Event handler for search input
+function handleSearch() {
+    const searchInput = document.getElementById('searchInput');
+    const searchText = searchInput.value;
+    filterAndRenderList(searchText);
 }
 
 
@@ -587,7 +633,71 @@ function clicked(element) {
 
     playMusic();
     playingSong(ulTag);
+
+    // close the playlist after selecting the music
+    // const musicList = wrapper.querySelector(".music-list");
+    // musicList.classList.remove("show");
 }
+
+
+
+// Assuming your music list container has an ID, e.g., "musicListContainer"
+const musicListContainer = wrapper.querySelector(".music-list");
+// Add a click event listener to the container
+musicListContainer.addEventListener("click", function (e) {
+    // Check if the clicked element is a song item
+    if (e.target.tagName === "LI") {
+        // Handle the song click
+        handleSongClick(e.target);
+    }
+});
+
+
+function handleSongClick(li) {
+    const liIndex = li.getAttribute("li-index");
+    musicIndex = liIndex;
+    loadMusic(musicIndex);
+    playMusic();
+    playingSong();
+}
+
+
+
+
+// search box
+function searchOnEnter(event) {
+    if (event.keyCode === 13) {
+        searchGoogle();
+    }
+}
+// search on google
+function searchGoogle() {
+    const searchInput = document.querySelector(".search__input");
+    const query = searchInput.value.trim();
+    if (query !== "") {
+        const searchUrl = "https://www.bing.com/search?q=" + encodeURIComponent(query);
+        window.open(searchUrl, "_blank");
+        // Select the text inside the input after the search button is pressed
+        searchInput.select();
+    }
+}
+// toggle the clear icon
+// function toggleClearIcon() {
+//     var input = document.querySelector('.search__input');
+//     var clearIcon = document.querySelector('.clear__icon');
+
+//     // If there's text in the input, show the cross icon; otherwise, hide it
+//     clearIcon.style.display = input.value.trim() !== '' ? 'block' : 'none';
+// }
+// clear the search input
+function clearSearchInput() {
+    var input = document.querySelector('.search__input');
+    input.value = '';
+    renderMusicList();
+    // toggleClearIcon(); // Hide the cross icon after clearing the input
+}
+
+
 
 
 // Event listener when the window is loaded
