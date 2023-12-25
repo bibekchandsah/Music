@@ -257,6 +257,13 @@
           </div>
           <i id="closee" class="material-icons" title="Close">close</i>
         </div>
+        <div class="search-container">
+                <input type="text" class=" search__input" id="searchInput" placeholder="Search music..." autocomplete="off" onkeydown="searchOnEnter(event)">
+                <!-- <i class="material-icons" id="searchIcon">search</i> -->
+                <i class="material-icons" id="searchIcon" onclick="searchGoogle()">search
+                </i>
+                <i class="material-icons clear__icon" aria-hidden="true" onclick="clearSearchInput()">clear</i>
+        </div>
         <ul>
           <!-- here li list are coming from js -->
         </ul>
