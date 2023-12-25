@@ -55,6 +55,51 @@ let allMusic = [
       img: "https://pagalworld.ink/siteuploads/thumb/sft6/2899_6_resize2x_300x300.webp",
       src: "https://paglasongs.com/files/download/id/2110"
     },
+        {
+      name: "Sorry",
+      artist: "Justin Bieber",
+      img: "https://pagalworld.com.im/datadbs/thumb/sft8/3860_4.jpg",
+      src: "https://pagalworld.com.im/files/download/id/3860"
+    },
+    {
+      name: "Water",
+      artist: "Tyla",
+      img: "https://i0.wp.com/justnaija.com/uploads/2023/07/Tyla-Water-artwork.jpeg?ulb=false&ssl=1&resize=320,350",
+      src: "https://cdn3.justnaija.me/uploads/music/2023/07/Tyla-Water-(JustNaija.com).mp3"
+    },
+    {
+      name: "Sawarne Lage",
+      artist: "Jubin Nautiyal",
+      img: "https://pagalworlld.com/siteuploads/thumb/sft15/7472_4.jpg",
+      src: "https://pagalsong.com.in/uploads/systemuploads/mp3/Mitron/Sawarne%20Lage%20(Mitron)%20128%20Kbps.mp3"
+    },
+    {
+      name: "Malang Sajna",
+      artist: "Parampara Tandon",
+      img: "https://i.ytimg.com/vi/-T1lDt7ttro/maxresdefault.jpg",
+      // img: "https://pagalsong.com.in/uploads//thumbnails/300x300/id3Picture_782231041.jpg",
+      src: "https://pagalsong.com.in/uploads/systemuploads/mp3/Malang%20Sajna%20-%20Sachet%20Tandon/Malang%20Sajna%20-%20Sachet%20Tandon%20128%20Kbps.mp3"
+    },
+    {
+      name: "Sajde - Kill Dil",
+      artist: "Arijit Singh, Nihira, Gulzar",
+      img: "https://i.ytimg.com/vi/P4fzOSVy6-o/maxresdefault.jpg",
+      src: "https://pagalsong.com.in/uploads/systemuploads/mp3/Kill%20Dil/Sajde%20-%20Kill%20Dil%20128%20Kbps.mp3"
+    },
+    {
+      name: "Mere Liye - Broken but Beautiful",
+      artist: "Akhil Sachdeva",
+      img: "https://pagalsong.com.in/uploads//thumbnails/300x300/id3Picture_1140277330.jpg",
+      src: "https://pagalsong.com.in/uploads/systemuploads/mp3/Broken%20but%20Beautiful%20Season%203/Mere%20Liye%20-%20Broken%20but%20Beautiful%20Season%203%20128%20Kbps.mp3"
+      // src: "https://pagalsong.com.in/download/52905/Mere%20Liye%20320%20KBPS%20mp3"
+    },
+    {
+      name: "Dil Jaaniye",
+      artist: "Tulsi Kumar, Jubin Nautiyal",
+      img: "https://pagalsong.com.in/uploads//thumbnails/300x300/id3Picture_795589986.jpg",
+      src: "https://pagalsong.com.in/uploads/systemuploads/mp3/Khandaani%20Shafakhana/Dil%20Jaaniye%20-%20Khandaani%20Shafakhana%20128%20Kbps.mp3"
+      // src: "https://pagalsong.com.in/download/10200/Dil%20Jaaniye%20320%20KBPS%20mp3"
+    },
     // {
     //   name: "",
     //   artist: "",
