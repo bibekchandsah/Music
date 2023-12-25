@@ -1,4 +1,7 @@
 // Modify your allMusic array with URLs
+// https://justnaija.com/
+// https://xclusiveloaded.com/
+// https://pagalsong.com.in/search
 let allMusic = [
     {
       name: "I Guess I m In Love",
