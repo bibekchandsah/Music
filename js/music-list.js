@@ -2,6 +2,7 @@
 // https://justnaija.com/
 // https://xclusiveloaded.com/
 // https://pagalsong.com.in/search
+// https://pagalworld.ink/
 let allMusic = [
     {
       name: "I Guess I m In Love",
