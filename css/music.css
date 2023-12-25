@@ -473,6 +473,7 @@ ul li.playing{
   cursor: pointer;
   position: relative;
   top: 5px;
+  color: #231a4d;
 }
 
 #searchIcon:hover{
@@ -496,13 +497,19 @@ ul li.playing{
   position: absolute;
   padding: 2px;
   border-radius: 25px;
-  /* color: #3005f2; */
+  color: #231a4d;
   font-weight: bolder;
   transition: color 0.3s;
+  background-color: #6767f3;
   /* display: none;  */
   /* Initially hide the cross icon */
 }
 
 .clear__icon:hover {
-  background-color: #dddaf5;
+  background-color: #4935e3d1;
+  color: #fff;
+}
+
+.clear__icon:active{
+  transform: scale(0.9);
 }
