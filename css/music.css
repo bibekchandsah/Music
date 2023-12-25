@@ -358,6 +358,32 @@ ul li.playing{
   
 }
 
+/* volume animation */
+@keyframes slideIn {
+  from {
+    left: -30px; 
+    opacity: 0;
+
+  }
+
+  to {
+    left: 0; 
+    opacity: 1;
+  }
+}
+
+@keyframes slideOut {
+  from {
+    left: 0; 
+    opacity: 1;
+  }
+
+  to {
+    left: -30px; 
+    opacity: 0;
+  }
+}
+
 /* volume bar effect */
 .range-slider__range {
 /*   -webkit-appearance: none; */
