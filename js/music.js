@@ -202,24 +202,42 @@ const volumeIcon = wrapper.querySelector("#volumeIcon");
 const volumeBar = wrapper.querySelector(".volume-bar");
 const volumeRange = wrapper.querySelector("#volumeRange");
 const volumeControl = wrapper.querySelector(".volume-control");
+
 // Event listener for volume icon click
 volumeIcon.addEventListener("click", toggleVolumeBar);
+
 // Event listener for volume range input
 volumeRange.addEventListener("input", setVolume);
+
 // Event listener for clicking outside volume control
 document.addEventListener("click", function (e) {
     // Check if the click is outside the volume control
     if (!volumeControl.contains(e.target)) {
-        // Hide the volume bar
-        volumeBar.style.display = "none";
+        // Hide the volume bar with an animation
+        volumeBar.style.animation = "slideOut 0.3s ease-out";
+        setTimeout(() => {
+            volumeBar.style.display = "none";
+            volumeBar.style.animation = ""; // Reset animation property
+        }, 300); // Adjust the timeout to match the animation duration
     }
 });
+
 // Function to toggle visibility of volume bar
 function toggleVolumeBar() {
     // Toggle the display property based on the current state
-    volumeBar.style.display = volumeBar.style.display === "none" ? "flex" : "none";
+    if (volumeBar.style.display === "none") {
+        // Show the volume bar with an animation
+        volumeBar.style.display = "flex";
+        volumeBar.style.animation = "slideIn 0.3s ease-in";
+    } else {
+        // Hide the volume bar with an animation
+        volumeBar.style.animation = "slideOut 0.3s ease-out";
+        setTimeout(() => {
+            volumeBar.style.display = "none";
+            volumeBar.style.animation = ""; // Reset animation property
+        }, 300); // Adjust the timeout to match the animation duration
+    }
 }
-
 
 // Function to set the volume based on the range input
 function setVolume() {
