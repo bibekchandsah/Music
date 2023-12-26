@@ -412,6 +412,20 @@ function nextMusic() {
     playingSong();
 }
 
+// swipe gesture for changing song i.e. next and previous
+const leftElement = document.querySelector('.wrapperr');
+// Initialize Hammer.js for swipe gestures on the left element
+const hammerLeft = new Hammer(leftElement);
+
+// Handle swipe left and right gestures only on the left element
+hammerLeft.on('swipeleft swiperight', function (event) {
+    if (event.type === 'swiperight') {
+        prevBtn.click();
+    } else if (event.type === 'swipeleft') {
+        nextBtn.click();
+    }
+});
+
 
 // update progress bar width according to music current time
 mainAudio.addEventListener("timeupdate", (e) => {
