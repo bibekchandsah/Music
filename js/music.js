@@ -269,8 +269,102 @@ function playMusic() {
             mainAudio.volume = volumeRange.value;
         } catch (error) {
             // Handle the play interruption error
-            console.error("Play request interrupted:", error);
+            handlePlayError(error);
         }
+    }
+}
+// Function to handle play errors
+function handlePlayError(error) {
+    // Handle the play interruption error
+    console.error("Play request interrupted:", error);
+
+    // Check if the error is related to autoplay policy
+    if (error.name === 'NotAllowedError' && error.message === 'play() failed because the user didn\'t interact with the document first. You need to interact with page first to auto play the music') {
+        // Show play icon and log that autoplay was paused
+        showPlayIcon();
+        console.log('Autoplay was paused');
+    }
+}
+// Function to show play icon
+function showPlayIcon() {
+    playPauseBtn.querySelector('i').innerText = 'play_arrow';
+    playPauseBtn.querySelector('i').title = 'Play';
+    playPauseBtn.querySelector('i').classList.remove('rotate');
+}
+
+// Add an event listener to document to track user interaction
+document.addEventListener('click', () => {
+    document.hasUserInteracted = true;
+    console.log("user interacted with website");
+});
+
+
+
+
+// Flag to check if the user has interacted with the website
+let userInteracted = false;
+
+// Event listener for user interaction
+document.addEventListener("click", function () {
+    // Set the flag to true when the user interacts
+    if (!userInteracted) {
+        console.log("User interacted with the website");
+        userInteracted = true;
+
+        // Start progress updates when the user interacts
+        mainAudio.addEventListener("loadedmetadata", function () {
+            console.log(`Loaded ${allMusic[musicIndex - 1].name}`);
+            updateProgress(); // Update progress once metadata is loaded
+        });
+
+        mainAudio.addEventListener("progress", updateProgress); // Update progress during loading
+        mainAudio.addEventListener("timeupdate", updateProgress); // Update progress during playback
+    }
+});
+
+// Function to update the loading percentage in music and console
+function updateProgress() {
+    // Calculate the loaded percentage
+    let loadedPercentage = 0;
+
+    if (mainAudio.buffered.length > 0) {
+        loadedPercentage = (mainAudio.buffered.end(0) / mainAudio.duration) * 100;
+    }
+
+    // Log the loaded percentage in the console
+    console.log(`Loaded: ${loadedPercentage.toFixed(2)}%`);
+
+    const playIcon = playPauseBtn.querySelector('i');
+    const musicPercentage = document.querySelector('.musicPercentage');
+    const loadingMusic = document.querySelector('.loadingMusic');
+
+    // Check if the "rotate" class is present in the play icon
+    if (playIcon && musicPercentage && loadingMusic && playIcon.classList.contains('rotate')) {
+        // Update the loading progress in the HTML
+        document.querySelector('.musicPercentage').innerText = `${loadedPercentage.toFixed(2)}%`;
+
+        // Show the loading progress message
+        document.querySelector('.loadingMusic').style.display = 'block';
+
+        // Stop logging when loaded 100%
+        if (loadedPercentage >= 100) {
+            console.log("Audio fully loaded");
+            // Remove the event listeners to stop further updates
+            mainAudio.removeEventListener("progress", updateProgress);
+            mainAudio.removeEventListener("timeupdate", updateProgress);
+
+            // Hide the loading progress message
+            document.querySelector('.loadingMusic').style.display = 'none';
+
+            // Show the loaded successfully message for 3 seconds
+            document.querySelector('.loadingMusic').innerText = 'Loaded successfully';
+            setTimeout(() => {
+                document.querySelector('.loadingMusic').innerText = '';
+            }, 3000);
+        }
+    } else {
+        // If loading icon is not shown, hide the loading progress
+        document.querySelector('.loadingMusic').style.display = 'none';
     }
 }
 
