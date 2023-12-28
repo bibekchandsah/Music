@@ -637,11 +637,63 @@ closemoreMusic.addEventListener("click", function () {
 });
 
 
-const ulTag = wrapper.querySelector("ul");
-// Function to render the music list
+// const ulTag = wrapper.querySelector("ul");
+// // Function to render the music list
+// function renderMusicList() {
+//     const ulTag = wrapper.querySelector("ul");
+//     // Loop through allMusic array to generate list items
+//     for (let i = 0; i < allMusic.length; i++) {
+//         // Generate a unique ID for each audio element
+//         const audioId = `audio-${i}`;
+//         // Generate liTag
+//         let liTag = `<li li-index="${i + 1}">
+//               <div class="row">
+//                 <span>${allMusic[i].name}</span>
+//                 <p>${allMusic[i].artist}</p>
+//               </div>
+//               <span class="audio-duration" data-duration="Play"></span>
+//               <audio id="${audioId}" src="${allMusic[i].src}"></audio>
+//               </li>`;
+//             //   <span class="audio-duration" data-duration="3:42"></span>
+//         ulTag.insertAdjacentHTML("beforeend", liTag);
+//         let liAudioDurationTag = ulTag.querySelector(`[id="${audioId}"] + .audio-duration`);
+//         let liAudioTag = ulTag.querySelector(`#${audioId}`);
+//         // Check if liAudioDurationTag is found before setting innerText
+//         if (liAudioDurationTag) {
+//             liAudioTag.addEventListener("loadeddata", () => {
+//                 // Update the duration once the audio is loaded
+//                 let duration = liAudioTag.duration;
+//                 let totalMin = Math.floor(duration / 60);
+//                 let totalSec = Math.floor(duration % 60);
+//                 if (totalSec < 10) {
+//                     totalSec = `0${totalSec}`;
+//                 }
+//                 liAudioDurationTag.innerText = `${totalMin}:${totalSec}`;
+//                 liAudioDurationTag.setAttribute("t-duration", `${totalMin}:${totalSec}`); //adding t-duration attribute with total duration value
+//             });
+//         } else {
+//             // console.error(`Could not find audio duration tag for ${allMusic[i].name}`);
+//             console.log(`Could not find audio duration tag for ${allMusic[i].name}`);
+//         }
+//     }
+
+//     // Add event listener for search input
+//     const searchInput = document.getElementById('searchInput');
+//     searchInput.addEventListener('input', handleSearch);
+
+//     // Initial render of the music list
+//     filterAndRenderList('');
+
+// }
+
+// Function to render the music list in ascending order
 function renderMusicList() {
     const ulTag = wrapper.querySelector("ul");
-    // Loop through allMusic array to generate list items
+
+    // Sort the allMusic array by song name in ascending order
+    allMusic.sort((a, b) => a.name.localeCompare(b.name));
+
+    // Loop through the sorted allMusic array to generate list items
     for (let i = 0; i < allMusic.length; i++) {
         // Generate a unique ID for each audio element
         const audioId = `audio-${i}`;
@@ -654,7 +706,6 @@ function renderMusicList() {
               <span class="audio-duration" data-duration="Play"></span>
               <audio id="${audioId}" src="${allMusic[i].src}"></audio>
               </li>`;
-            //   <span class="audio-duration" data-duration="3:42"></span>
         ulTag.insertAdjacentHTML("beforeend", liTag);
         let liAudioDurationTag = ulTag.querySelector(`[id="${audioId}"] + .audio-duration`);
         let liAudioTag = ulTag.querySelector(`#${audioId}`);
@@ -669,10 +720,9 @@ function renderMusicList() {
                     totalSec = `0${totalSec}`;
                 }
                 liAudioDurationTag.innerText = `${totalMin}:${totalSec}`;
-                liAudioDurationTag.setAttribute("t-duration", `${totalMin}:${totalSec}`); //adding t-duration attribute with total duration value
+                liAudioDurationTag.setAttribute("t-duration", `${totalMin}:${totalSec}`);
             });
         } else {
-            // console.error(`Could not find audio duration tag for ${allMusic[i].name}`);
             console.log(`Could not find audio duration tag for ${allMusic[i].name}`);
         }
     }
@@ -683,8 +733,12 @@ function renderMusicList() {
 
     // Initial render of the music list
     filterAndRenderList('');
-
 }
+
+
+
+
+
 
 // Function to filter and render the music list based on search input
 function filterAndRenderList(searchText) {
