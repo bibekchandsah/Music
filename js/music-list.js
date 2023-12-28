@@ -193,7 +193,7 @@ let allMusic = [
       artist: "Ninja",
       category: "sad hindi punjabi",
       img: "https://img.youtube.com/vi/uMsR_R9xWpM/maxresdefault.jpg",
-      src: "https://cdn4.canehill.info/dl?hash=qaovhA56y8O0rQBa5MuanLJAoeTtR0werTYOr6iYWWheDM3nkC%2B%2Bc0WvjeUIA2v6IHYvrs%2BDwSx6tFtOzN1yMVkad5bNQEEaK4fWLPQZ68ZItYYBuwbEffN2jnayatgSt%2BnPZEVuvvcPg8xHS7Ip7fB5WQ5v5ac7uD0d5RbWqNCCqkibvYnWCkY%2BlHxmuQEe506etZo5dYH%2FtyuyAYVac4%2BFIb9ohK8Shan5JHtJ9VscQhpYiSH%2B6JEWYAQiJplq1rpTAiFkapAvvlOgq6hllmOpPjXHhXlBv2tPP1QndhXeFK4%2FatuWYRwORXxTSpWJ"
+      src: "https://dl230.dlmate56.xyz/?file=M3R4SUNiN3JsOHJ6WWQ2a3NQS1Y5ZGlxVlZIOCtyZ1dsOXh4NlJGb0s2NEh2NHd1MDYrTkp0dEdaWVlPMUlQcEo5c2Z2aERkWnB1NE1RdkNoWmNvUldESzM5OHp2VGFFb2Q1eUNZSTZmaC8ybisvb3BUQnl3alQ2Y04rR1hvdFhhVHhJckU1a3dHM1k0dlREOGliNXR6YWVxRU9FSWlrYTRYME5OUG5Wem85SndXR1dLcVhDeXA4UXVUT2Q1OThiL1AyTjUwU2s1YmQ3NnZwZ2MxZEdUS0lFd2EzbDhyN0J0UlJmaDV3VGgyU0s3K2UrRnBjbkdiR1hkREl0YjNWWnVyaTVCVTFLbldNTjhYYTdxL3gxdURsZUl2WXorM1RwL2ZDNE5nPT0%3D"
     },
     {
       name: "Mujhko Yaad Sataye Teri - Phir Hera Pheri",
@@ -320,7 +320,7 @@ let allMusic = [
       artist: "Ashutosh KC",
       category: "nepali sad",
       img: "https://img.youtube.com/vi/kEbcHhNsRoU/maxresdefault.jpg",
-      src: "https://dl109.dlmate18.online/?file=M3R4SUNiN3JsOHJ6WWQ2a3NQS1Y5ZGlxVlZIOCtyZ0ZpOTB2MHg4d0NlQm5oY1prK3NXWkFvSmdLS0VHem9PakhaVjQ3Q3pSY3NQQUJnYU5zNWRvVDJQU3NkQTB0VHJ3NDQ4MFVaUTBCRERobFBPM2d6Tnp6RlhUYzhpZVVPcHdPeklwaFV0RzBTVzd4Ti9IaXhyTi9YQzk5QXVFYVN0WG14Vk5PTzNBK0kxTndXREdhcXExaE1CVytuREl0YzRjbk9PVXJnU3JsK2RwN0l3Z0N3Sm5aYzFaMjgwPQ%3D%3D"
+      src: "https://github.com/bibek10550/bibeksha/raw/main/songs/music-2.mp3"
     },
     // {
     //   name: "",
