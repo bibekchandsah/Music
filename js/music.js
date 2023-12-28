@@ -243,7 +243,25 @@ function toggleVolumeBar() {
 function setVolume() {
     const volumeValue = volumeRange.value;
     mainAudio.volume = volumeValue;
+
+    // Store the volume value in local storage
+    localStorage.setItem("volumeValue", volumeValue);
 }
+
+// Function to initialize the volume from local storage
+function initializeVolume() {
+    const storedVolume = localStorage.getItem("volumeValue");
+
+    // If there is a stored volume value, set the volume range and update the audio volume
+    if (storedVolume !== null) {
+        volumeRange.value = storedVolume;
+        mainAudio.volume = storedVolume;
+    }
+}
+
+// Call the initializeVolume function when the window is loaded
+window.addEventListener("load", initializeVolume);
+
 
 
 //  handle the clicked song list item, updating the UI, and playing the selected song.
