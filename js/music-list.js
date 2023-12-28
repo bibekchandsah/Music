@@ -284,7 +284,7 @@ let allMusic = [
       name: "Aankhon Mein Teri Ajab Si",
       artist: "K.K.",
       category: "hindi romantic",
-      img: "https://paglasongs.com/uploads/thumb/sft29/14030_4.jpg",
+      img: "https://img.youtube.com/vi/qSy6xPm_Tpo/maxresdefault.jpg",
       src: "https://paglasongs.com/files/download/id/14030"
     },
     {
