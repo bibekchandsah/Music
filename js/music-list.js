@@ -1,8 +1,10 @@
 // Modify your allMusic array with URLs
 // https://justnaija.com/
 // https://xclusiveloaded.com/
+// for hindi song only
 // https://pagalsong.com.in/search
 // https://pagalworld.ink/
+// https://gospeljingle.com/?s=culpa+mia+song
 // category : bass hiphop hindi english sad romantic attitude
 let allMusic = [
     {
@@ -10,21 +12,22 @@ let allMusic = [
       artist: "Clinton Kane",
       category: "romantic english",
       img: "https://ww-pagalworld.com/uploads/thumb/sft28/13834_4.jpg",
-      src: "https://ww-pagalworld.com/files/download/id/13834"
+      src: "https://files.gospeljingle.com/uploads/music/2023/01/Clinton_Kane_-_I_Guess_Im_In_Love.mp3"
     },
     {
       name: "My Baby Love",
       artist: "Jony",
       category: "romantic english",
       img: "https://ww-pagalworld.com/uploads/thumb/sft14/6851_4.jpg",
-      src: "https://ww-pagalworld.com/files/download/id/6851"
+      // src: "https://ww-pagalworld.com/files/download/id/6851"
+      src: "https://github.com/bibek10550/Music/raw/main/Music/My-Baby-Love.mp3"
     },
     {
       name: "Gasolina",
       artist: "Daddy Yankee",
       category: "bass attitude english",
       img: "https://ww-pagalworld.com/uploads/thumb/sft26/12922_4.jpg",
-      src: "https://ww-pagalworld.com/files/download/id/12922"
+      src: "https://github.com/bibek10550/Music/raw/main/Music/Gasolina.mp3"
     //   src: "https://www.jiosaavn.com/song/gasolina/RAAjZENnT0s"
     },
     {
@@ -32,10 +35,10 @@ let allMusic = [
       artist: "Arijit Singh",
       category: "romantic hindi",
       img: "https://ww-pagalworld.com/uploads/thumb/sft27/13270_4.jpg",
-      src: "https://ww-pagalworld.com/files/download/id/13270"
+      src: "https://files.gospeljingle.com/uploads/music/2023/10/Heeriye-feat-Arijit-Singh-Jasleen-Royal-(Gospeljingle.com).mp3"
     },
     {
-      name: "Calm Down Slowed Reverb",
+      name: "Calm Down",
       artist: "Rema",
       category: "english",
       img: "https://ww-pagalworld.com/uploads/thumb/sft26/12678_4.jpg",
@@ -46,35 +49,35 @@ let allMusic = [
       artist: "DJ Snake, Selena Gomez",
       category: "bass english",
       img: "https://pagalworlld.com/siteuploads/thumb/sft11/5088_4.jpg",
-      src: "https://pagalworlld.com/files/download/id/5088"
+      src: "https://github.com/bibek10550/Music/raw/main/Music/Taki-Taki.mp3"
     },
     {
       name: "Let Me Love You",
       artist: "Justin Bieber",
       category: "romantic english",
       img: "https://img.wynk.in/unsafe/248x248/filters:no_upscale():strip_exif():format(webp)/http://s3-ap-south-1.amazonaws.com/wynk-music-cms/srch_universalmusic/music/update/1599607201/srch_universalmusic_00602557056273-QMZSY1600019.jpg",
-      src: "https://paglasongs.com/files/download/id/3537"
+      src: "https://github.com/bibek10550/Music/raw/main/Music/Let-Me-Love-You.mp3"
     },
     {
       name: "Baby",
       artist: "Justin Bieber",
       category: "romantic english",
       img: "https://pagalworlld.com/siteuploads/thumb/sft10/4702_4.jpg",
-      src: "https://pagalworlld.com/files/download/id/4702"
+      src: "https://github.com/bibek10550/Music/raw/main/Music/Baby.mp3"
     },
     {
       name: "Despacito",
       artist: "Daddy Yankee, Luis Fonsi",
       category: "bass english",
       img: "https://pagalworld.ink/siteuploads/thumb/sft6/2899_6_resize2x_300x300.webp",
-      src: "https://paglasongs.com/files/download/id/2110"
+      src: "https://github.com/bibek10550/Music/raw/main/Music/Despacito.mp3"
     },
     {
       name: "Sorry",
       artist: "Justin Bieber",
       category: "sad english",
       img: "https://pagalworld.com.im/datadbs/thumb/sft8/3860_4.jpg",
-      src: "https://pagalworld.com.im/files/download/id/3860"
+      src: "https://github.com/bibek10550/Music/raw/main/Music/Sorry.mp3"
     },
     {
       name: "Water",
@@ -118,7 +121,7 @@ let allMusic = [
       artist: "Tulsi Kumar, Jubin Nautiyal",
       category: "sad hindi",
       img: "https://pagalsong.com.in/uploads//thumbnails/300x300/id3Picture_795589986.jpg",
-      src: "https://pagalsong.com.in/uploads/systemuploads/mp3/Khandaani%20Shafakhana/Dil%20Jaaniye%20-%20Khandaani%20Shafakhana%20128%20Kbps.mp3"
+      src: "https://pagalsong.com.in/uploads/systemuploads/mp3/Khandaani%20Shafakhana/Dil%20Jaaniye%20-%20Khandaani%20Shafakhana%20128%20Kbps.mp3",
       // src: "https://pagalsong.com.in/download/10200/Dil%20Jaaniye%20320%20KBPS%20mp3"
     },
     {
