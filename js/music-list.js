@@ -188,6 +188,140 @@ let allMusic = [
       img: "https://pagalsong.com.in/uploads//thumbnails/300x300/id3Picture_25762861.jpg",
       src: "https://pagalsong.com.in/uploads/systemuploads/mp3/Commando%203/Akhiyaan%20Milavanga%20-%20Commando%203%20128%20Kbps.mp3"
     },
+    {
+      name: "Roi Na Je yaad Meri Aayi Ve",
+      artist: "Ninja",
+      category: "sad hindi punjabi",
+      img: "https://img.youtube.com/vi/uMsR_R9xWpM/maxresdefault.jpg",
+      src: "https://cdn4.canehill.info/dl?hash=qaovhA56y8O0rQBa5MuanLJAoeTtR0werTYOr6iYWWheDM3nkC%2B%2Bc0WvjeUIA2v6IHYvrs%2BDwSx6tFtOzN1yMVkad5bNQEEaK4fWLPQZ68ZItYYBuwbEffN2jnayatgSt%2BnPZEVuvvcPg8xHS7Ip7fB5WQ5v5ac7uD0d5RbWqNCCqkibvYnWCkY%2BlHxmuQEe506etZo5dYH%2FtyuyAYVac4%2BFIb9ohK8Shan5JHtJ9VscQhpYiSH%2B6JEWYAQiJplq1rpTAiFkapAvvlOgq6hllmOpPjXHhXlBv2tPP1QndhXeFK4%2FatuWYRwORXxTSpWJ"
+    },
+    {
+      name: "Mujhko Yaad Sataye Teri - Phir Hera Pheri",
+      artist: "Himesh Reshammiya",
+      category: "hindi hiphop",
+      img: "https://pagalsong.com.in/uploads//thumbnails/300x300/id3Picture_1056876323.jpg",
+      src: "https://pagalsong.com.in/uploads/systemuploads/mp3/Phir%20Hera%20Pheri/Mujhko%20Yaad%20Sataye%20Teri%20-%20Phir%20Hera%20Pheri%20128%20Kbps.mp3"
+    },
+    {
+      name: "Hookah Bar - Khiladi 786",
+      artist: "Himesh Reshammiya, Vineet Singh",
+      category: "hindi hiphop",
+      img: "https://pagalsong.com.in/uploads//thumbnails/300x300/id3Picture_627530666.jpg",
+      src: "https://pagalsong.com.in/uploads/systemuploads/mp3/Khiladi%20786/Hookah%20Bar%20-%20Khiladi%20786%20128%20Kbps.mp3"
+    },
+    {
+      name: "Khaab",
+      artist: "Akhil",
+      category: "sad punjabi hindi",
+      img: "https://img.youtube.com/vi/2eliQ_KR8yA/maxresdefault.jpg",
+      src: "https://pagalworld.ink/files/download/type/320/id/9024"
+      // https://pagalworld.ink/files/download/type/64/id/9024
+    },
+    {
+      name: "Kiya Kiya - Welcome",
+      artist: "Anand Raj Anand, Shweta Pandit",
+      category: "hindi hiphop",
+      img: "https://pagalsong.com.in/uploads//thumbnails/300x300/id3Picture_184312163.jpg",
+      src: "https://pagalsong.com.in/uploads/systemuploads/mp3/Welcome/Kiya%20Kiya%20-%20Welcome%20128%20Kbps.mp3"
+    },
+    {
+      name: "Sadi Gali - Tanu Weds Manu",
+      artist: "Lehmber Hussainpuri",
+      category: "hindi punjabi hiphop",
+      img: "https://pagalsong.com.in/uploads//thumbnails/300x300/id3Picture_236692627.jpg",
+      src: "https://pagalsong.com.in/uploads/systemuploads/mp3/Tanu%20Weds%20Manu/Sadi%20Gali%20-%20Tanu%20Weds%20Manu%20128%20Kbps.mp3"
+    },
+    {
+      name: "Brown Rang - International Villager",
+      artist: "Yo Yo Honey Singh",
+      category: "hindi hiphop attitude",
+      img: "https://img.youtube.com/vi/BYIDm2K8RJc/maxresdefault.jpg",
+      src: "https://pagalsong.com.in/uploads/systemuploads/mp3/International%20Villager/Brown%20Rang%20-%20International%20Villager%20128%20Kbps.mp3"
+    },
+    {
+      name: "Sunny Sunny - Yaariyan",
+      artist: "Yo Yo Honey Singh, Neha Kakkar",
+      category: "hindi hiphop",
+      img: "https://i.ytimg.com/vi/MXJCnccDLA0/hqdefault.jpg",
+      src: "https://pagalsong.com.in/uploads/systemuploads/mp3/Yaariyan/Sunny%20Sunny%20-%20Yaariyan%20128%20Kbps.mp3"
+    },
+    {
+      name: "Blue Eyes",
+      artist: "Yo Yo Honey Singh",
+      category: "hindi hiphop",
+      img: "https://img.youtube.com/vi/NbyHNASFi6U/maxresdefault.jpg",
+      src: "https://pagalsong.com.in/uploads/systemuploads/mp3/Blue%20Eyes%20-%20Yo%20Yo%20Honey%20Singh/Blue%20Eyes%20-%20Yo%20Yo%20Honey%20Singh%20128%20Kbps.mp3"
+    },
+    {
+      name: "Baby Doll",
+      artist: "Meet Bros, Kanika Kapoor",
+      category: "hindi hiphop",
+      img: "https://img.youtube.com/vi/yP9KiFTyBks/maxresdefault.jpg",
+      src: "https://pagalsong.com.in/uploads/systemuploads/mp3/Ragini%20MMS%202/Baby%20Doll%20-%20Ragini%20MMS%202%20128%20Kbps.mp3"
+    },
+    {
+      name: "Tu Cheez Badi Hai Mast Mast",
+      artist: "Udit Narayan, Neha Kakkar",
+      category: "hindi hiphop",
+      img: "https://pagalworlld.com/siteuploads/thumb/sft1/241_4.jpg",
+      src: "https://pagalworlld.com/files/download/id/241"
+    },
+    {
+      name: "Sakhiyaan",
+      artist: "Maninder Buttar",
+      category: "hindi punjabi hiphop romantic",
+      img: "https://pagalsong.com.in/uploads//thumbnails/300x300/id3Picture_947457968.jpg",
+      src: "https://pagalsong.com.in/uploads/systemuploads/mp3/Sakhiyaan%20%20-%20Maninder%20Buttar/Sakhiyaan%20-%20Maninder%20Buttar%20128%20Kbps.mp3"
+    },
+    {
+      name: "Saiyaara - Ek Tha Tiger",
+      artist: "Mohit Chauhan, Tarannum Mallik",
+      category: "hindi sad",
+      img: "https://pagalsong.com.in/uploads//thumbnails/300x300/id3Picture_1809697404.jpg",
+      src: "https://pagalsong.com.in/uploads/systemuploads/mp3/Ek%20Tha%20Tiger/Saiyaara.mp3"
+    },
+    {
+      name: "Aankhon Mein Teri Ajab Si",
+      artist: "K.K.",
+      category: "hindi romantic",
+      img: "https://paglasongs.com/uploads/thumb/sft29/14030_4.jpg",
+      src: "https://paglasongs.com/files/download/id/14030"
+    },
+    {
+      name: "High Heels - Ki & Ka",
+      artist: "Yo Yo Honey Singh, Meet Bros",
+      category: "hindi hiphop",
+      img: "https://pagalsong.com.in/uploads//thumbnails/300x300/id3Picture_1320932489.jpg",
+      src: "https://pagalsong.com.in/uploads/systemuploads/mp3/Ki%20&%20Ka/01%20-%20High%20Heels.mp3"
+    },
+    {
+      name: "Lat Lag Gayee - Race 2",
+      artist: "Benny Dayal, Shalmali Kholgade",
+      category: "hindi hiphop",
+      img: "https://img.youtube.com/vi/KxCjVIFxZNo/maxresdefault.jpg",
+      src: "https://pagalsong.com.in/uploads/systemuploads/mp3/Race%202/Lat%20Lag%20Gayee%20-%20Race%202%20128%20Kbps.mp3"
+    },
+    {
+      name: "But Slowly Slowly",
+      artist: "Rekha Thapa",
+      category: "nepali hiphop",
+      img: "https://i.ytimg.com/vi/WgMffMxvVfs/0.jpg",
+      src: "https://dl159.dlmate15.online/?file=M3R4SUNiN3JsOHJ6WWQ2a3NQS1Y5ZGlxVlZIOCtyZ0dqY0Z4OUJ3c0ZxZFY3YjRqMlBPc09vSUVDTElEd2NHUkh0QlR2blh6VVBHbkdVVENoSjB0U25MS3c5NDhxVDZCL3A1ekg4OTRXaFBIaStlM25td3oyeUhzY2MzWkFMcFRLQ1ZkcmxBd2xuUzFsYlNHbnlML25udXJpbFdWV2lJWi9EWWJiclBYOUpBVi9FZU5hdS8wMm9JQXVTK1M1OGNZamFETzQxZWhrT05vL3M5OFJFRXBJTWtJajhpaWhyYmZzeG9kZ3NoTg%3D%3D"
+    },
+    {
+      name: "Kasari Bhanu",
+      artist: "Swoopna Suman",
+      category: "nepali sad",
+      img: "https://img.youtube.com/vi/7SaM24Cjzj0/maxresdefault.jpg",
+      src: "https://dl253.dlmate07.online/?file=M3R4SUNiN3JsOHJ6WWQ2a3NQS1Y5ZGlxVlZIOCtyZ1BtY1k3MVJsb0k2Tk5xSmhrbk11bUpjQk1KNllEaHFhN0E5ZFg5REtUUjltUE5RREMvYXN4VFh5UitkZDJpaXJDOG9CckV1aGpWQi9zaWVleGozcFptdzd5ZDliTUdhc1lZR2NvNVVacTN5T3MzUERBc1VpOTRWdTBxRmlYZVNZUDkya3RNT1dEdE0xdTFDeVpTYURYMHIxWCtRV1YrSkFabFAyTjUwZnh4cjFqa2ZJelcxeGtlb0pZelpQNDJxMmQ4aGRLMTg5TGpCdng3L0d2SEp0b1NmRElLR1VvYkdRYS83THJYa2s9"
+    },
+    {
+      name: "Maya",
+      artist: "Ashutosh KC",
+      category: "nepali sad",
+      img: "https://img.youtube.com/vi/kEbcHhNsRoU/maxresdefault.jpg",
+      src: "https://dl109.dlmate18.online/?file=M3R4SUNiN3JsOHJ6WWQ2a3NQS1Y5ZGlxVlZIOCtyZ0ZpOTB2MHg4d0NlQm5oY1prK3NXWkFvSmdLS0VHem9PakhaVjQ3Q3pSY3NQQUJnYU5zNWRvVDJQU3NkQTB0VHJ3NDQ4MFVaUTBCRERobFBPM2d6Tnp6RlhUYzhpZVVPcHdPeklwaFV0RzBTVzd4Ti9IaXhyTi9YQzk5QXVFYVN0WG14Vk5PTzNBK0kxTndXREdhcXExaE1CVytuREl0YzRjbk9PVXJnU3JsK2RwN0l3Z0N3Sm5aYzFaMjgwPQ%3D%3D"
+    },
     // {
     //   name: "",
     //   artist: "",
