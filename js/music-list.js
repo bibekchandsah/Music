@@ -306,14 +306,14 @@ let allMusic = [
       artist: "Rekha Thapa",
       category: "nepali hiphop",
       img: "https://i.ytimg.com/vi/WgMffMxvVfs/0.jpg",
-      src: "https://dl159.dlmate15.online/?file=M3R4SUNiN3JsOHJ6WWQ2a3NQS1Y5ZGlxVlZIOCtyZ0dqY0Z4OUJ3c0ZxZFY3YjRqMlBPc09vSUVDTElEd2NHUkh0QlR2blh6VVBHbkdVVENoSjB0U25MS3c5NDhxVDZCL3A1ekg4OTRXaFBIaStlM25td3oyeUhzY2MzWkFMcFRLQ1ZkcmxBd2xuUzFsYlNHbnlML25udXJpbFdWV2lJWi9EWWJiclBYOUpBVi9FZU5hdS8wMm9JQXVTK1M1OGNZamFETzQxZWhrT05vL3M5OFJFRXBJTWtJajhpaWhyYmZzeG9kZ3NoTg%3D%3D"
+      src: "https://github.com/bibek10550/Music/raw/main/Music/But-Slowly-Slowly.mp3"
     },
     {
       name: "Kasari Bhanu",
       artist: "Swoopna Suman",
       category: "nepali sad",
       img: "https://img.youtube.com/vi/7SaM24Cjzj0/maxresdefault.jpg",
-      src: "https://dl253.dlmate07.online/?file=M3R4SUNiN3JsOHJ6WWQ2a3NQS1Y5ZGlxVlZIOCtyZ1BtY1k3MVJsb0k2Tk5xSmhrbk11bUpjQk1KNllEaHFhN0E5ZFg5REtUUjltUE5RREMvYXN4VFh5UitkZDJpaXJDOG9CckV1aGpWQi9zaWVleGozcFptdzd5ZDliTUdhc1lZR2NvNVVacTN5T3MzUERBc1VpOTRWdTBxRmlYZVNZUDkya3RNT1dEdE0xdTFDeVpTYURYMHIxWCtRV1YrSkFabFAyTjUwZnh4cjFqa2ZJelcxeGtlb0pZelpQNDJxMmQ4aGRLMTg5TGpCdng3L0d2SEp0b1NmRElLR1VvYkdRYS83THJYa2s9"
+      src: "https://github.com/bibek10550/Music/raw/main/Music/Kasari-Bhanu.mp3"
     },
     {
       name: "Maya",
