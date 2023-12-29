@@ -322,6 +322,90 @@ let allMusic = [
       img: "https://img.youtube.com/vi/kEbcHhNsRoU/maxresdefault.jpg",
       src: "https://github.com/bibek10550/bibeksha/raw/main/songs/music-2.mp3"
     },
+    {
+      name: "Dharti Gagan",
+      artist: "Sonu Nigam, Anuradha Paudwal",
+      category: "hindi bhakti",
+      img: "https://img.youtube.com/vi/cPD8h-Q11u8/maxresdefault.jpg",
+      src: "https://pagalsong.com.in/uploads/systemuploads/mp3/Jai%20Maa%20Vaishno%20Devi/Dharti%20Gagan%20Mein%20Hoti%20Hai%20128%20Kbps.mp3"
+    },
+    {
+      name: "O Aaye Tere Bhawan",
+      artist: "Sonu Nigam, Anuradha Paudwal",
+      category: "Hindi bhakti",
+      img: "https://img.youtube.com/vi/l_vU6xIh9f8/maxresdefault.jpg",
+      src: "https://pagalsong.com.in/uploads/systemuploads/mp3/Jai%20Maa%20Vaishno%20Devi/O%20Aaye%20Tere%20Bhawan%20128%20Kbps.mp3"
+    },
+    {
+      name: "Hanuman Chalisa",
+      artist: "Gulshan Kumar",
+      category: "Bhakti hindi",
+      img: "https://img.youtube.com/vi/lXk91eqYFG4/maxresdefault.jpg",
+      src: "https://github.com/bibek10550/Music/raw/main/Music/Hanuman-Chalisa.mp3"
+    },
+    {
+      name: "Tujhe Kab Se Pukare",
+      artist: "Sonu Nigam, Anuradha Paudwal",
+      category: "hindi bhakti",
+      img: "https://img.youtube.com/vi/ObEt7q0VpvA/maxresdefault.jpg",
+      src: "https://pagalsong.com.in/uploads/systemuploads/mp3/Jai%20Maa%20Vaishno%20Devi/Tujhe%20Kab%20Se%20Pukare%20128%20Kbps.mp3"
+    },
+    {
+      name: "Leke Pooja Ki Thali",
+      artist: "Sonu Nigam, Anuradha Paudwal",
+      category: "hindi bhakti",
+      img: "https://img.youtube.com/vi/W7_C58BskdM/maxresdefault.jpg",
+      src: "https://pagalsong.com.in/uploads/systemuploads/mp3/Jai%20Maa%20Vaishno%20Devi/Leke%20Pooja%20Ki%20Thali%20128%20Kbps.mp3"
+    },
+    {
+      name: "Maa Tu Mujhe Darshan De",
+      artist: "Sonu Nigam, Anuradha Paudwal",
+      category: "hindi bhakti",
+      img: "https://img.youtube.com/vi/cLxff7epOb8/maxresdefault.jpg",
+      src: "https://pagalsong.com.in/uploads/systemuploads/mp3/Jai%20Maa%20Vaishno%20Devi/Mere%20Nainau%20Ki%20Pyas%20128%20Kbps.mp3"
+    },
+    {
+      name: "Man Mera Mandir",
+      artist: "Sameer Sen, nuradha Paudwal",
+      category: "hindi bhakti",
+      img: "https://img.youtube.com/vi/S6HFRZmZrTI/maxresdefault.jpg",
+      src: "https://pagalsong.com.in/uploads/systemuploads/mp3/Shiv%20Aaradhna/Man%20Mera%20Mandir,Shiv%20Meri%20Puja%20-%20Shiv%20Aaradhna%20128%20Kbps.mp3"
+    },
+    {
+      name: "Shiv Shankar Ko Jisne Puja",
+      artist: "Sameer Sen, nuradha Paudwal",
+      category: "hindi bhakti",
+      img: "https://img.youtube.com/vi/w7HbgKcQS_w/maxresdefault.jpg",
+      src: "https://pagalsong.com.in/uploads/systemuploads/mp3/Shiv%20Aaradhna/Shiv%20Shankar%20Ko%20Jisne%20Puja%20-%20Shiv%20Aaradhna%20128%20Kbps.mp3"
+    },
+    {
+      name: "Chalo Shiv Shankar Ke Mandi",
+      artist: "Sameer Sen, nuradha Paudwal",
+      category: "hindi bhakti",
+      img: "https://img.youtube.com/vi/jNFlndV30no/maxresdefault.jpg",
+      src: "https://pagalsong.com.in/uploads/systemuploads/mp3/Shiv%20Aaradhna/Chalo%20Shiv%20Shankar%20Ke%20Mandir%20Mein%20-%20Shiv%20Aaradhna%20128%20Kbps.mp3"
+    },
+    {
+      name: "Kabhi-Pyase-Ko-Pani-Pilaya-Nahi",
+      artist: "Kumar Vishu",
+      category: "hindi bhakti",
+      img: "https://img.youtube.com/vi/fMDIPTbAKIM/maxresdefault.jpg",
+      src: "https://github.com/bibek10550/Music/raw/main/Music/Kabhi-Pyase-Ko-Pani-Pilaya-Nahi.mp3"
+    },
+    {
+      name: "Shiv Tandav Stotram",
+      artist: "Shankar Mahadevan",
+      category: "hindi bhakti",
+      img: "https://img.youtube.com/vi/2IlzAP9ibT0/maxresdefault.jpg",
+      src: "https://pagalsong.com.in/uploads/systemuploads/mp3/Mahashivaraatri%20-%20Top%2010/Shiv%20Tandav%20Stotram%20-%20Mahashivaraatri%20-%20Top%2010%20128%20Kbps.mp3"
+    },
+    {
+      name: "Har Har Shambhu Shiv Mahadeva",
+      artist: "Jeetu Sharma",
+      category: "hindi bhakti",
+      img: "https://img.youtube.com/vi/A1Kgl2s6RKo/maxresdefault.jpg",
+      src: "https://pagalsong.com.in/uploads/systemuploads/mp3/Har%20Har%20Shambhu%20Shiv%20Mahadeva/Har%20Har%20Shambhu%20Shiv%20Mahadeva%20-%20Jeetu%20Sharma%20128%20Kbps.mp3"
+    },
     // {
     //   name: "",
     //   artist: "",
