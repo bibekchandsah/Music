@@ -68,9 +68,9 @@ window.addEventListener("load", () => {
 });
 
 
-function togglePlayPause() {
+// function togglePlayPause() {
 
-}
+// }
 
 
 // initialize th music player
