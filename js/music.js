@@ -160,8 +160,11 @@ function removeLoadingIcon() {
 }
 
 
+// for current music background
+let styleTag = document.createElement("style");
 // Function to load music using URLs
 // function loadMusic(indexNumb) {
+document.body.appendChild(styleTag);
 function loadMusic(indexNumb, playCallback) {
     // Set loading icon, title, and add spinning class
     if (!wrapper.classList.contains("paused")) {
@@ -183,6 +186,14 @@ function loadMusic(indexNumb, playCallback) {
         console.log(`Loaded ${allMusic[indexNumb - 1].name}`);
         playMusic(); // Play the audio once metadata is loaded
     });
+    // changes background according to current music
+    let coverBackground = document.querySelector(".wrapperr");
+    styleTag.innerHTML = `.wrapperr .loads::before{
+        background-image:url('${allMusic[indexNumb - 1].img}');
+        background-repeat: no-repeat;
+        background-size: cover;      
+
+    }`;
     mainAudio.addEventListener("loadeddata", () => {
         // Remove loading icon, show play icon, set title, and remove spinning class
         // playPauseBtn.querySelector("i").innerText = "play_arrow";
