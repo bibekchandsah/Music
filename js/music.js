@@ -68,6 +68,11 @@ window.addEventListener("load", () => {
 });
 
 
+function togglePlayPause() {
+
+}
+
+
 // initialize th music player
 function initializeMusicPlayer() {
     // Event listeners for play, pause, next, and previous buttons
