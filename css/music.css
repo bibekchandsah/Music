@@ -75,7 +75,7 @@ body {
 
 .wrapperr .loads::before {
   content: "";
-  background-image: url("https://source.unsplash.com/380x620/?music,music track,12 bar blues, a capella, accelerando, acoustic, adagio, allegro, andante, arpeggio, ballad, bar, bass, bridge, cadence, chord, clef, coda, consonance, crescendo, dissonance, dynamics, encore, fill, flat, forte, harmony, hook, improvisation, interval, key, legato, lyrics, major, melody, minor, motif, octave, pitch, quartet, rhythm, riff, root, scale, sharp, sheet music, solfège, solo, sonata, soprano");
+/*   background-image: url("https://source.unsplash.com/380x620/?music,music track,12 bar blues, a capella, accelerando, acoustic, adagio, allegro, andante, arpeggio, ballad, bar, bass, bridge, cadence, chord, clef, coda, consonance, crescendo, dissonance, dynamics, encore, fill, flat, forte, harmony, hook, improvisation, interval, key, legato, lyrics, major, melody, minor, motif, octave, pitch, quartet, rhythm, riff, root, scale, sharp, sheet music, solfège, solo, sonata, soprano"); */
   background-size: cover;
   /* position: fixed; */
   position: absolute;
