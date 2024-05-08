@@ -5,6 +5,7 @@
 
 <!-- Profile View Count -->
 <p align="right"> <img src="https://komarev.com/ghpvc/?username=bibek10550Music&label=Profile%20views&color=0e75b6&style=flat" alt="Bibek Chand Sah (BCS)" /> </p>
+<!-- <p align="left"> <img src="https://komarev.com/ghpvc/?username=bibek10550bcsindex&label=Profile%20views&color=0e75b6&style=flat" alt="Bibek Chand Sah (BCS)" /> </p> -->
 
 ## Website
 <h1>👉🏻 <a href="https://bibek10550.github.io/Music/">Music</a></h1>
