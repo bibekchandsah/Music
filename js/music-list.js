@@ -20,14 +20,14 @@ let allMusic = [
       category: "romantic english",
       img: "https://ww-pagalworld.com/uploads/thumb/sft14/6851_4.jpg",
       // src: "https://ww-pagalworld.com/files/download/id/6851"
-      src: "https://github.com/bibek10550/Music/raw/main/Music/My-Baby-Love.mp3"
+      src: "https://github.com/bibekchandsah/Music/raw/main/Music/My-Baby-Love.mp3"
     },
     {
       name: "Gasolina",
       artist: "Daddy Yankee",
       category: "bass attitude english",
       img: "https://ww-pagalworld.com/uploads/thumb/sft26/12922_4.jpg",
-      src: "https://github.com/bibek10550/Music/raw/main/Music/Gasolina.mp3"
+      src: "https://github.com/bibekchandsah/Music/raw/main/Music/Gasolina.mp3"
     //   src: "https://www.jiosaavn.com/song/gasolina/RAAjZENnT0s"
     },
     {
@@ -49,35 +49,35 @@ let allMusic = [
       artist: "DJ Snake, Selena Gomez",
       category: "bass english",
       img: "https://pagalworlld.com/siteuploads/thumb/sft11/5088_4.jpg",
-      src: "https://github.com/bibek10550/Music/raw/main/Music/Taki-Taki.mp3"
+      src: "https://github.com/bibekchandsah/Music/raw/main/Music/Taki-Taki.mp3"
     },
     {
       name: "Let Me Love You",
       artist: "Justin Bieber",
       category: "romantic english",
       img: "https://img.wynk.in/unsafe/248x248/filters:no_upscale():strip_exif():format(webp)/http://s3-ap-south-1.amazonaws.com/wynk-music-cms/srch_universalmusic/music/update/1599607201/srch_universalmusic_00602557056273-QMZSY1600019.jpg",
-      src: "https://github.com/bibek10550/Music/raw/main/Music/Let-Me-Love-You.mp3"
+      src: "https://github.com/bibekchandsah/Music/raw/main/Music/Let-Me-Love-You.mp3"
     },
     {
       name: "Baby",
       artist: "Justin Bieber",
       category: "romantic english",
       img: "https://pagalworlld.com/siteuploads/thumb/sft10/4702_4.jpg",
-      src: "https://github.com/bibek10550/Music/raw/main/Music/Baby.mp3"
+      src: "https://github.com/bibekchandsah/Music/raw/main/Music/Baby.mp3"
     },
     {
       name: "Despacito",
       artist: "Daddy Yankee, Luis Fonsi",
       category: "bass english",
       img: "https://pagalworld.ink/siteuploads/thumb/sft6/2899_6_resize2x_300x300.webp",
-      src: "https://github.com/bibek10550/Music/raw/main/Music/Despacito.mp3"
+      src: "https://github.com/bibekchandsah/Music/raw/main/Music/Despacito.mp3"
     },
     {
       name: "Sorry",
       artist: "Justin Bieber",
       category: "sad english",
       img: "https://pagalworld.com.im/datadbs/thumb/sft8/3860_4.jpg",
-      src: "https://github.com/bibek10550/Music/raw/main/Music/Sorry.mp3"
+      src: "https://github.com/bibekchandsah/Music/raw/main/Music/Sorry.mp3"
     },
     {
       name: "Water",
@@ -193,7 +193,7 @@ let allMusic = [
       artist: "Ninja",
       category: "sad hindi punjabi",
       img: "https://img.youtube.com/vi/uMsR_R9xWpM/maxresdefault.jpg",
-      src: "https://github.com/bibek10550/Music/raw/main/Music/Roi%20Na.mp3"
+      src: "https://github.com/bibekchandsah/Music/raw/main/Music/Roi%20Na.mp3"
     },
     {
       name: "Mujhko Yaad Sataye Teri - Phir Hera Pheri",
@@ -306,21 +306,21 @@ let allMusic = [
       artist: "Rekha Thapa",
       category: "nepali hiphop",
       img: "https://i.ytimg.com/vi/WgMffMxvVfs/0.jpg",
-      src: "https://github.com/bibek10550/Music/raw/main/Music/But-Slowly-Slowly.mp3"
+      src: "https://github.com/bibekchandsah/Music/raw/main/Music/But-Slowly-Slowly.mp3"
     },
     {
       name: "Kasari Bhanu",
       artist: "Swoopna Suman",
       category: "nepali sad",
       img: "https://img.youtube.com/vi/7SaM24Cjzj0/maxresdefault.jpg",
-      src: "https://github.com/bibek10550/Music/raw/main/Music/Kasari-Bhanu.mp3"
+      src: "https://github.com/bibekchandsah/Music/raw/main/Music/Kasari-Bhanu.mp3"
     },
     {
       name: "Maya",
       artist: "Ashutosh KC",
       category: "nepali sad",
       img: "https://img.youtube.com/vi/kEbcHhNsRoU/maxresdefault.jpg",
-      src: "https://github.com/bibek10550/bibeksha/raw/main/songs/music-2.mp3"
+      src: "https://github.com/bibekchandsah/bibeksha/raw/main/songs/music-2.mp3"
     },
     {
       name: "Dharti Gagan",
@@ -341,7 +341,7 @@ let allMusic = [
       artist: "Gulshan Kumar",
       category: "Bhakti hindi",
       img: "https://img.youtube.com/vi/lXk91eqYFG4/maxresdefault.jpg",
-      src: "https://github.com/bibek10550/Music/raw/main/Music/Hanuman-Chalisa.mp3"
+      src: "https://github.com/bibekchandsah/Music/raw/main/Music/Hanuman-Chalisa.mp3"
     },
     {
       name: "Tujhe Kab Se Pukare",
@@ -390,7 +390,7 @@ let allMusic = [
       artist: "Kumar Vishu",
       category: "hindi bhakti",
       img: "https://img.youtube.com/vi/fMDIPTbAKIM/maxresdefault.jpg",
-      src: "https://github.com/bibek10550/Music/raw/main/Music/Kabhi-Pyase-Ko-Pani-Pilaya-Nahi.mp3"
+      src: "https://github.com/bibekchandsah/Music/raw/main/Music/Kabhi-Pyase-Ko-Pani-Pilaya-Nahi.mp3"
     },
     {
       name: "Shiv Tandav Stotram",
