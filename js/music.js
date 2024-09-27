@@ -188,7 +188,7 @@ function loadMusic(indexNumb, playCallback) {
     // Event listener for when metadata is loaded
     mainAudio.addEventListener("loadedmetadata", function () {
         // Log "Loaded" message in the console
-        console.log(`Loaded ${allMusic[indexNumb - 1].name}`);
+        // console.log(`Loaded ${allMusic[indexNumb - 1].name}`);
         playMusic(); // Play the audio once metadata is loaded
     });
     // changes background according to current music
@@ -347,7 +347,7 @@ document.addEventListener("click", function () {
 
         // Start progress updates when the user interacts
         mainAudio.addEventListener("loadedmetadata", function () {
-            console.log(`Loaded ${allMusic[musicIndex - 1].name}`);
+            // console.log(`Loaded ${allMusic[musicIndex - 1].name}`);
             updateProgress(); // Update progress once metadata is loaded
         });
 
