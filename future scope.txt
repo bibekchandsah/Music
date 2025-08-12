@@ -1,0 +1,39 @@
+
+
+echo "# superset_notification_gui" >> README.md
+git init
+git add .
+git commit -m "first commit"
+git branch -M main
+git remote add origin https://github.com/bibekchandsah/music.git
+git push -u origin main
+
+
+git remote add origin https://github.com/bibekchandsah/music.git
+git branch -M main
+git push -u origin main
+
+
+
+pull with rebase (cleaner history)
+---------------------------------------------
+# Pull with rebase to avoid merge commits
+git pull --rebase origin main
+
+# If there are conflicts, resolve them, then:
+git add .
+git rebase --continue
+
+# Push your changes
+git push origin main
+
+
+
+# Only use if you're sure you want to overwrite remote changes
+git push --force-with-lease origin main
+
+# See what commits are on remote but not local
+git log HEAD..origin/main
+
+# See what files changed
+git diff HEAD origin/main --name-only
